@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>simple demo</title>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+<form id="simple">
+    <input id="text" name="text" type="text"/>
+</form>
+<div>
+    <input type="button" value="保存" onclick="onon()"/>
+    <input type="button" value="导出" onclick="exportWord()"/>
+</div>
+
+<script>
+    //获取内容
+    function onon() {
+        var val = $("#simple input").val();
+        if (val.length == 0) {
+            alert("请输入文本");
+        } else {
+            $.ajax({
+                url: "http://127.0.0.1:11111/poitl/genByPOITL",
+                type: "post",
+                dataType: "json",
+                data: JSON.stringify({"text": val}),
+                headers: {'Content-Type': 'application/json'},
+                success: function (ret) {
+                }
+            })
+        }
+    }
+
+    //导出word
+    function exportWord() {
+        location = 'http://127.0.0.1:11111/poitl/genByPOITL';
+    }
+
+</script>
+</body>
+</html>
