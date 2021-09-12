@@ -1,5 +1,5 @@
-##总结：
-不与考虑的工具：Jacob、JSP、iText、java2Word、PageOffice、Spire.DOC、jasperreports；予以考虑的工具：Apache POI、FreeMarker、docx4j
+## 总结：
+不与考虑的工具：Jacob、JSP、iText、java2Word、PageOffice、Spire.DOC、jasperreports；予以考虑的工具：Apache POI、FreeMarker
 
 + Jacob不考虑，因为其服务器只能是windows平台，不支持unix和linux，且服务器上必须安装微软Office。
 + iText只能生成rtf格式的文档，这个是致命的，对于客户体验来说，这个是不可接受的。
