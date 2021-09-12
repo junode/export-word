@@ -1,4 +1,4 @@
-##总结：
+## 总结：
 不与考虑的工具：Jacob、JSP、iText、java2Word、PageOffice、Spire.DOC、jasperreports；予以考虑的工具：Apache POI、FreeMarker
 
 + Jacob不考虑，因为其服务器只能是windows平台，不支持unix和linux，且服务器上必须安装微软Office。
