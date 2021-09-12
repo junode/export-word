@@ -1,12 +1,15 @@
 ##总结：
-不与考虑的工具：Jacob、JSP、iText、java2Word、PageOffice、Spire.DOC、jasperreports；予以考虑的工具：Apache POI、FreeMarker
+不与考虑的工具：Jacob、JSP、iText、java2Word、PageOffice、Spire.DOC、jasperreports；予以考虑的工具：Apache POI、FreeMarker、docx4j
 
 + Jacob不考虑，因为其服务器只能是windows平台，不支持unix和linux，且服务器上必须安装微软Office。
-+ iText，只能生成rtf格式的文档，这个是致命的，对于客户体验来说，这个是不可接受的。
-+ java2Word，需要windows支持，ruo-yi应该更加通用，不因仅word导出就让ruo-yi应用环境受限。
-+ PageOffice，不能在服务器端生成文件，ruo-yi应该更加通用，不因仅word导出就让ruo-yi应用环境受限。
++ iText只能生成rtf格式的文档，这个是致命的，对于客户体验来说，这个是不可接受的。
++ java2Word，需要windows支持，若是开源项目应该要通用，不因仅word导出就让项目应用环境受限。
++ PageOffice，不能在服务器端生成文件，若是开源项目应该要通用，不因仅word导出就让项目应用环境受限。
 + Spire.DOC：收费的。
 + jasperreports：在maven 仓库中 引用数过低【更实际的原因是我拉不下它的pom依赖。】，还有原因就是我看到它依赖的包有点多，让我觉得它有点重了，怕对项目造成不良影响。
++ Apache POI：较为原生，但也就相对轻量。在当前项目的demo中，POITL对其进行了封装，提供了简易使用的API。
++ Freemarker：采用Freemarker模板生成word是由XML+FreeMarker实现的。 XML文件定义模板，然后Freemarker解析模板输出到word。
++ docx4j：基于 JAXB 的 Java 库，用于生成 Word docx、Powerpoint pptx 和 Excel xlsx 文件，而如果项目仅是导出word文档，个人觉得太过冗余。
 
 ## java导出word的若干方式及比较
 
